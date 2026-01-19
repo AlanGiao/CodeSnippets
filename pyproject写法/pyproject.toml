@@ -1,0 +1,20 @@
+# 必须以 pyproject.toml 放在和包文件夹同级的位置。
+# 可以用 pip install -e . 安装。注意 -e 后面的点号。
+
+[project]
+# name - 在 pip list 中显示的名字
+# version - 必须是用数字开头
+name = "proteinmpnn-logit"
+version = "1.0.0"
+description = "ProteinMPNN"
+
+# 必须要有这个条目
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools>=61.0"]
+
+[tool.setuptools]
+# 存放整个包项目的文件夹。import的时候就是用这个名字的。
+# 一般来说，packages 只有一个文件夹，且这个文件夹的名字
+# 和 [project] 中的 name 一样。
+packages = ["mpnn_logits"]
